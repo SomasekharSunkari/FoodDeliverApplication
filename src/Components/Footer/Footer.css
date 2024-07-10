@@ -22,9 +22,13 @@
     gap:20px
 
 }
+.footer-content-left ul, .footer-content-center ul, .footer-content-right ul{
+    margin-left: -2rem;
+}
 .footer-content-left li, .footer-content-center li, .footer-content-right li{
     list-style: none;
     margin-bottom: 10px;
+
     cursor: pointer;
 }
 .footer-content-center h2, .footer-content-right h2{
@@ -39,4 +43,15 @@
     width: 100%;
     margin-top: 15px;
     border-radius: 50px;
+}
+@media screen and (max-width:750px)
+{
+    .footer-content {
+        display: flex;
+        gap: 35px;
+        flex-direction: column;
+    }
+    .copy-right{
+        text-align: center;
+    }
 }

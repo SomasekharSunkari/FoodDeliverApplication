@@ -3,7 +3,7 @@ import "./Exploremenu.css"
 import { menu_list } from '../../assets/assets'
 const Exploremenu = ({category,setCategory}) => {
   return (
-    <div className='explore-menu'>
+    <div className='explore-menu' id='explore-menu'>
         <h1>Explore our Menu</h1>
         <p className='explore-menu-text'>Choose from a diverse menu featuring  a delectable array of dishes crafted with the finest ingrediants and culinary expertise.Our misson is to satisfy your 
         craving and elevate you dining expereince, one delicious meal at a time.</p>

@@ -6,15 +6,17 @@ import Cart from './Components/Cart/Cart.jsx'
 import PlaceHolder from './Components/PlaceOrder/PlaceHolder.jsx'
 import { Route, Routes } from 'react-router-dom'
 import Footer from './Components/Footer/Footer.jsx'
+import Loginpopup from './Components/Loginpopup/Loginpopup.jsx'
 function App() {
-
+const [showlogin,setShowLogin] =  useState(false);
   return (
     <>
+    {showlogin?<Loginpopup setShowLogin={setShowLogin} />:<></>}
   <div className='app'>
-    <Navbar/>
+    <Navbar setShowLogin={setShowLogin}/>
     <Routes>
       <Route path='/cart' element={<Cart/>}/>
-      <Route path='/home' element={<Home/>}/>
+      <Route path='/' element={<Home/>}/>
       <Route path='/placeorder' element={<PlaceHolder/>}/>
     </Routes>
   

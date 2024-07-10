@@ -26,7 +26,11 @@
     border-radius: 50%;
 
 }
-img{
+.navbar-top a{
+    text-decoration: none;
+    color: black;
+}
+.navbar-right img {
     cursor: pointer;
 }
 .navbar-top{
@@ -64,4 +68,37 @@ img{
 .active{
     padding-bottom: 2px;
     border-bottom: 2px solid black;
+}
+
+
+@media (max-width:1110px){.image-nav{
+    width:140px;
+}
+    .navbar-top ul{
+        gap:20px;
+        font-size: 15px;
+    }
+    .navbar-right{
+        gap:20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    
+    .navbar-right button{
+     width: 70px;
+     height: 40px;
+    }
+}
+@media screen and (max-width:850px) {
+.navbar-top ul{
+    margin-left: -10px;
+}
+    
+}
+@media (max-width:800px){
+    .navbar-top ul{
+      display: none;
+    }
+   
 }
