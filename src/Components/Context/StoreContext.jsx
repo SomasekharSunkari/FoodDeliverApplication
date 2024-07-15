@@ -16,12 +16,26 @@ const ContextProvider = (props)=>{
     const removeFromCart = (id)=>{
         setCartItems((prev)=>({...prev,[id]:prev[id]-1}))
     }
+    const getCartItemsTotal = ()=>{
+        let total = 0;
+        for(const item in cartItems){
+            if(cartItems[item] > 0){
+                let iteminfo = food_list.find((fitem)=>fitem._id === item)
+                total += iteminfo.price * cartItems[item]
+            }
+          
+        }
+
+
+        return total;
+    }
     const ContextValue = {
         food_list,
         cartItems,
         setCartItems,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        getCartItemsTotal
     }
     useEffect(()=>{
         console.log(cartItems)
