@@ -90,3 +90,10 @@ gap:20px
         flex-direction: column-reverse;
     }
 }
+.noo-cart{
+    height: 60vh;
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

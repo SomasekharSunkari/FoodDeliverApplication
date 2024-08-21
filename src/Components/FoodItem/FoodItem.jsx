@@ -1,14 +1,17 @@
 import React, { useContext } from 'react'
 import "./FoodItem.css"
 import { assets } from '../../assets/assets'
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 import { StoreContext } from '../Context/StoreContext';
 
 const FoodItem = ({id,name,price,description,image}) => {
     const { cartItems,
         addToCart,
-        removeFromCart} = useContext(StoreContext)
+        removeFromCart} = useContext(StoreContext);
+       
   return (
-    <div className='food_item'>
+    <div className={`food_item `}>
         <div className="food_item_image">
             <img src={image} className='food_image_main' alt="Food_Item_Image"/>
             {!cartItems[id] ? 
