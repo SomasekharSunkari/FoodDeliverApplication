@@ -67,4 +67,15 @@ margin-top: 1rem;
     margin-top: 5px;
     padding-left: 10px;
     margin-bottom: 5px;
+    border: 1px solid gray ;
+}
+
+@media screen and (max-width:1110px){
+    .placeorderleft {
+        width: 100%;
+        /* position: relative; */
+    }
+    .placeorder{
+        flex-direction: column;
+    }
 }

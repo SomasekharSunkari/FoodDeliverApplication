@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { StoreContext } from '../Context/StoreContext';
 import { useNavigate } from 'react-router-dom';
+import { FiShoppingCart } from "react-icons/fi";
+
 import "./Cart.css";
 
 const Cart = () => {
@@ -8,7 +10,15 @@ const Cart = () => {
   const navigate = useNavigate();
 
   if (getCartItemsTotal() <= 0) {
-    return <h1 className='noo-cart'>Your cart is empty now</h1>;
+    return (
+      <div className='cart-first'>
+        <div className='empty-cart'>
+
+          <FiShoppingCart className='cart-icon' />
+          <h1 className='noo-cart'>Your cart is empty now</h1>
+          </div>
+          <button className='cart-order-btn'><a href="/#explore-menu">Order Now</a></button>
+      </div>)
   }
 
   return (

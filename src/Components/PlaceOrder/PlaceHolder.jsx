@@ -6,7 +6,7 @@ import { StoreContext } from '../Context/StoreContext'
 const PlaceHolder = () => {
   const {getCartItemsTotal}  = useContext(StoreContext)
   return (
-    <form className='placeorder'>
+    <form className='placeorder' >
       <div className="placeorderleft">
         <p className='title'>Delivery Information</p>
         <div className='multifields'>
