@@ -48,7 +48,7 @@ const PlaceHolder = () => {
               <b>${getCartItemsTotal()+2}</b>
               {/* <hr /> */}
             </div>
-            <button onClick={()=>{navigate("/placeorder")}}>PROCEED TO CHECKOUT</button>
+            <button onClick={()=>{navigate("/thankyou")}}>PROCEED TO PAYMENT</button>
 
           </div>
 

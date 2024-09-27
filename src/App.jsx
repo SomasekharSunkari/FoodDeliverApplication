@@ -10,6 +10,7 @@ import Loginpopup from './Components/Loginpopup/Loginpopup.jsx'
 import { ScrollTrigger } from 'gsap/all'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import Thankyou from './Components/Thankyou.jsx'
 gsap.registerPlugin(ScrollTrigger);
 function App() {
   const [showlogin, setShowLogin] = useState(false);
@@ -24,6 +25,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/' element={<Home />} />
           <Route path='/placeorder' element={<PlaceHolder />} />
+          <Route path='/thankyou' element={<Thankyou/>}/>
         </Routes>
 
       </div>
